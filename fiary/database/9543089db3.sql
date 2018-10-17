@@ -1,0 +1,328 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.3
+-- https://www.phpmyadmin.net/
+--
+-- Host: mysqlsvr41.world4you.com
+-- Erstellungszeit: 17. Okt 2018 um 13:09
+-- Server-Version: 5.5.59
+-- PHP-Version: 5.6.34
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Datenbank: `9543089db3`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `benutzer`
+--
+
+CREATE TABLE `benutzer` (
+  `idbenutzer` int(10) UNSIGNED NOT NULL,
+  `vorname` varchar(255) NOT NULL,
+  `nachname` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `rolle` varchar(255) NOT NULL DEFAULT 'Redakteur',
+  `hash` varchar(255) NOT NULL,
+  `active` varchar(255) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `einsatzart`
+--
+
+CREATE TABLE `einsatzart` (
+  `ideinsatzart` int(10) UNSIGNED NOT NULL,
+  `einsatzart_name` varchar(255) NOT NULL COMMENT 'lookup für logbuch.unterkategorie abhängig von logbuch.kategorie=einsatz'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Daten für Tabelle `einsatzart`
+--
+
+INSERT INTO `einsatzart` (`ideinsatzart`, `einsatzart_name`) VALUES
+(1, 'Brandeinsatz'),
+(2, 'Technischer Einsatz'),
+(3, 'Schadstoffeinsatz');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `fahrzeug`
+--
+
+CREATE TABLE `fahrzeug` (
+  `idfahrzeug` int(10) UNSIGNED NOT NULL,
+  `fahrzeugart` varchar(255) NOT NULL,
+  `fahrzeugbezeichnung` varchar(255) NOT NULL,
+  `gesamtkilometer` decimal(10,2) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Daten für Tabelle `fahrzeug`
+--
+
+INSERT INTO `fahrzeug` (`idfahrzeug`, `fahrzeugart`, `fahrzeugbezeichnung`, `gesamtkilometer`) VALUES
+(1, 'KDO', 'Kommandofahrzeug', NULL),
+(2, 'HLF', '', NULL),
+(3, 'VF', '', NULL),
+(4, 'LFAB', '', NULL),
+(5, 'privat', '', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `fahrzeugbesatzung`
+--
+
+CREATE TABLE `fahrzeugbesatzung` (
+  `idlogbuch_logbuch` int(10) UNSIGNED NOT NULL,
+  `idfahrzeug_fahrzeug` int(10) UNSIGNED NOT NULL,
+  `idmitglieder_mitglieder` int(10) UNSIGNED NOT NULL,
+  `rolle` varchar(255) NOT NULL,
+  `atemschutz` tinyint(1) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `kategorie`
+--
+
+CREATE TABLE `kategorie` (
+  `idcategory` int(10) UNSIGNED NOT NULL,
+  `category_name` varchar(255) NOT NULL COMMENT 'lookup für logbuch.kategorie'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Daten für Tabelle `kategorie`
+--
+
+INSERT INTO `kategorie` (`idcategory`, `category_name`) VALUES
+(1, 'Einsatz'),
+(2, 'Übung'),
+(3, 'Tätigkeit');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `logbuch`
+--
+
+CREATE TABLE `logbuch` (
+  `idlogbuch` int(11) NOT NULL,
+  `kategorie` varchar(255) NOT NULL,
+  `unterkategorie` varchar(255) NOT NULL,
+  `beschreibung` varchar(255) NOT NULL,
+  `alarmzeit` datetime NOT NULL,
+  `anforderer_name` varchar(255) NOT NULL,
+  `anforderer_telefon_nr` varchar(255) NOT NULL,
+  `beginn_datum` date NOT NULL,
+  `beginn_zeit` time NOT NULL,
+  `ende_datum` date NOT NULL,
+  `ende_zeit` time NOT NULL,
+  `plz` int(11) NOT NULL,
+  `ort` varchar(255) NOT NULL,
+  `straße` varchar(255) NOT NULL,
+  `hausnummer` varchar(255) NOT NULL,
+  `betriebsmittel` varchar(255) NOT NULL,
+  `bericht` longtext NOT NULL,
+  `wetter` varchar(255) DEFAULT NULL,
+  `bodenbeschaffenheit` varchar(255) DEFAULT NULL,
+  `notizen` longtext NOT NULL,
+  `idbenutzer_benutzer` int(10) UNSIGNED NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Daten für Tabelle `logbuch`
+--
+
+INSERT INTO `logbuch` (`idlogbuch`, `kategorie`, `unterkategorie`, `beschreibung`, `alarmzeit`, `anforderer_name`, `anforderer_telefon_nr`, `beginn_datum`, `beginn_zeit`, `ende_datum`, `ende_zeit`, `plz`, `ort`, `straße`, `hausnummer`, `betriebsmittel`, `bericht`, `wetter`, `bodenbeschaffenheit`, `notizen`, `idbenutzer_benutzer`) VALUES
+(0, 'einsatz', 'brandeinsatz', 'es hat gebrannt', '2018-10-10 08:08:39', 'unbekannt', 'unterdrückt', '2018-10-11', '00:00:00', '2018-10-09', '00:00:00', 4232, 'Hagenberg', 'Softwarepark', '11', 'viele', 'nix passirt', '{\"Sonne\":\"1\", \"Nebel\":0} für alle Wetterbedingungen mit 0 bzw 1 abspeicher und das heißt hakerl gesetzt oder nicht', 'siehe wetter', 'irgendwas', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `mitglieder`
+--
+
+CREATE TABLE `mitglieder` (
+  `idmitglieder` int(10) UNSIGNED NOT NULL,
+  `standesbuchnummer` int(11) NOT NULL,
+  `dienstgrad` varchar(255) NOT NULL,
+  `vorname` varchar(255) NOT NULL,
+  `nachname` varchar(255) NOT NULL,
+  `telefon_nr` varchar(255) NOT NULL,
+  `adresse` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `atemschutztauglich` tinyint(1) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `rolle`
+--
+
+CREATE TABLE `rolle` (
+  `idrolle` int(11) NOT NULL,
+  `rollenname` varchar(255) NOT NULL COMMENT 'lookup für fahrzeugbesatzung.rolle'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Daten für Tabelle `rolle`
+--
+
+INSERT INTO `rolle` (`idrolle`, `rollenname`) VALUES
+(1, 'Einsatzleiter'),
+(2, 'Lenker'),
+(3, 'Gruppenkommandant'),
+(4, 'Maschinist');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `uebungsart`
+--
+
+CREATE TABLE `uebungsart` (
+  `iduebungsart` int(10) UNSIGNED NOT NULL,
+  `uebungsname` varchar(255) NOT NULL COMMENT 'lookup für logbuch.unterkategorie abhängig von logbuch.kategorie=übung',
+  `gesamtzeit` decimal(10,2) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Daten für Tabelle `uebungsart`
+--
+
+INSERT INTO `uebungsart` (`iduebungsart`, `uebungsname`, `gesamtzeit`) VALUES
+(1, 'Atemschutzübung', '0.00'),
+(2, 'Gesamtübung', '0.00'),
+(3, 'Bewerbsübung', '0.00'),
+(4, 'Übungsfahrt', '0.00');
+
+--
+-- Indizes der exportierten Tabellen
+--
+
+--
+-- Indizes für die Tabelle `benutzer`
+--
+ALTER TABLE `benutzer`
+  ADD PRIMARY KEY (`idbenutzer`);
+
+--
+-- Indizes für die Tabelle `einsatzart`
+--
+ALTER TABLE `einsatzart`
+  ADD PRIMARY KEY (`ideinsatzart`);
+
+--
+-- Indizes für die Tabelle `fahrzeug`
+--
+ALTER TABLE `fahrzeug`
+  ADD PRIMARY KEY (`idfahrzeug`);
+
+--
+-- Indizes für die Tabelle `fahrzeugbesatzung`
+--
+ALTER TABLE `fahrzeugbesatzung`
+  ADD PRIMARY KEY (`idlogbuch_logbuch`,`idfahrzeug_fahrzeug`,`idmitglieder_mitglieder`),
+  ADD KEY `idlogbuch_logbuch` (`idlogbuch_logbuch`),
+  ADD KEY `idfahrzeug_fahrzeug` (`idfahrzeug_fahrzeug`),
+  ADD KEY `idmitglieder_mitglieder` (`idmitglieder_mitglieder`);
+
+--
+-- Indizes für die Tabelle `kategorie`
+--
+ALTER TABLE `kategorie`
+  ADD PRIMARY KEY (`idcategory`);
+
+--
+-- Indizes für die Tabelle `logbuch`
+--
+ALTER TABLE `logbuch`
+  ADD KEY `idbenutzer_benutzer` (`idbenutzer_benutzer`);
+
+--
+-- Indizes für die Tabelle `mitglieder`
+--
+ALTER TABLE `mitglieder`
+  ADD PRIMARY KEY (`idmitglieder`);
+
+--
+-- Indizes für die Tabelle `rolle`
+--
+ALTER TABLE `rolle`
+  ADD PRIMARY KEY (`idrolle`);
+
+--
+-- Indizes für die Tabelle `uebungsart`
+--
+ALTER TABLE `uebungsart`
+  ADD PRIMARY KEY (`iduebungsart`);
+
+--
+-- AUTO_INCREMENT für exportierte Tabellen
+--
+
+--
+-- AUTO_INCREMENT für Tabelle `benutzer`
+--
+ALTER TABLE `benutzer`
+  MODIFY `idbenutzer` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `einsatzart`
+--
+ALTER TABLE `einsatzart`
+  MODIFY `ideinsatzart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT für Tabelle `fahrzeug`
+--
+ALTER TABLE `fahrzeug`
+  MODIFY `idfahrzeug` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT für Tabelle `kategorie`
+--
+ALTER TABLE `kategorie`
+  MODIFY `idcategory` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT für Tabelle `mitglieder`
+--
+ALTER TABLE `mitglieder`
+  MODIFY `idmitglieder` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `rolle`
+--
+ALTER TABLE `rolle`
+  MODIFY `idrolle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT für Tabelle `uebungsart`
+--
+ALTER TABLE `uebungsart`
+  MODIFY `iduebungsart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
