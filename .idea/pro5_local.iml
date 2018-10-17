@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/fiary/tests" isTestSource="true" packagePrefix="Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/fiary/src/AppBundle" isTestSource="false" packagePrefix="AppBundle\" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/doctrine/annotations" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/doctrine/collections" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/doctrine/common" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/doctrine/dbal" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/doctrine/doctrine-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/doctrine/doctrine-cache-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/doctrine/orm" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/fig/link-util" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/incenteev/composer-parameter-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/jdorn/sql-formatter" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/paragonie/random_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/psr/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/psr/link" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/sensio/distribution-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/sensio/framework-extra-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/sensio/generator-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/sensiolabs/security-checker" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/swiftmailer/swiftmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/symfony/monolog-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/symfony/phpunit-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-apcu" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-intl-icu" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-php56" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-php70" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-util" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/symfony/swiftmailer-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/symfony/symfony" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/twig/twig" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
