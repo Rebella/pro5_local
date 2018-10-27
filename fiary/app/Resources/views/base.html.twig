@@ -19,7 +19,7 @@
 
         <div class="sidebar-header">
             <span class="mr-auto">Username</span>
-            <a id="log-out" class="ml-auto" href="{{ path('homepage') }}"><img  src=" {{ asset('img/exit.svg') }}" alt="logout symbol"></a>
+            <a id="log-out" class="ml-auto" href="{{ path('login') }}"><img  src=" {{ asset('img/exit.svg') }}" alt="logout symbol"></a>
         </div>
 
         <ul class="list-unstyled components">
@@ -41,8 +41,14 @@
                    <img  id="arrow" src=" {{ asset('img/close-menu.svg') }}" alt="logout symbol">
                </button>
            </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    {% block body %}{% endblock %}
+                </div>
+            </div>
+        </div>
 
-        {% block body %}{% endblock %}
     </div>
 </div>
 
