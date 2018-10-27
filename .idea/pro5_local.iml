@@ -42,6 +42,7 @@
       <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-util" />
       <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/symfony/swiftmailer-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/symfony/symfony" />
+      <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/twbs/bootstrap" />
       <excludeFolder url="file://$MODULE_DIR$/fiary/vendor/twig/twig" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -49,10 +50,104 @@
     <orderEntry type="module-library">
       <library name="PHARS">
         <CLASSES>
+          <root url="phar://$MODULE_DIR$/fiary/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/Tests/DeprecationErrorHandler/deprecation.phar/" />
+          <root url="phar://$MODULE_DIR$/fiary/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/deprecation.phar/" />
           <root url="phar://$MODULE_DIR$/composer.phar/" />
+          <root url="phar://$MODULE_DIR$/fiary/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
         </CLASSES>
         <SOURCES>
+          <root url="phar://$MODULE_DIR$/fiary/vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/Tests/DeprecationErrorHandler/deprecation.phar/" />
+          <root url="phar://$MODULE_DIR$/fiary/vendor/symfony/phpunit-bridge/Tests/DeprecationErrorHandler/deprecation.phar/" />
           <root url="phar://$MODULE_DIR$/composer.phar/" />
+          <root url="phar://$MODULE_DIR$/fiary/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="PHP">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/fiary/vendor/composer" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/annotations" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/cache" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/collections" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/common" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/dbal" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/doctrine-bundle" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/doctrine-cache-bundle" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/inflector" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/instantiator" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/lexer" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/orm" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/fig/link-util" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/incenteev/composer-parameter-handler" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/jdorn/sql-formatter" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/monolog/monolog" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/paragonie/random_compat" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/psr/cache" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/psr/container" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/psr/link" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/psr/log" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/psr/simple-cache" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/sensio/distribution-bundle" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/sensio/framework-extra-bundle" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/sensio/generator-bundle" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/sensiolabs/security-checker" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/swiftmailer/swiftmailer" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/monolog-bundle" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/phpunit-bridge" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-apcu" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-ctype" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-intl-icu" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-mbstring" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-php56" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-php70" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-util" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/swiftmailer-bundle" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/symfony" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/twbs/bootstrap" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/twig/twig" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/fiary/vendor/composer" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/annotations" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/cache" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/collections" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/common" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/dbal" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/doctrine-bundle" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/doctrine-cache-bundle" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/inflector" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/instantiator" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/lexer" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/doctrine/orm" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/fig/link-util" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/incenteev/composer-parameter-handler" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/jdorn/sql-formatter" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/monolog/monolog" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/paragonie/random_compat" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/psr/cache" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/psr/container" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/psr/link" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/psr/log" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/psr/simple-cache" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/sensio/distribution-bundle" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/sensio/framework-extra-bundle" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/sensio/generator-bundle" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/sensiolabs/security-checker" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/swiftmailer/swiftmailer" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/monolog-bundle" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/phpunit-bridge" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-apcu" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-ctype" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-intl-icu" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-mbstring" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-php56" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-php70" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/polyfill-util" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/swiftmailer-bundle" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/symfony/symfony" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/twbs/bootstrap" />
+          <root url="file://$MODULE_DIR$/fiary/vendor/twig/twig" />
         </SOURCES>
       </library>
     </orderEntry>
