@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
--- Host: mysqlsvr41.world4you.com
--- Erstellungszeit: 17. Okt 2018 um 13:09
--- Server-Version: 5.5.59
--- PHP-Version: 5.6.34
+-- Host: 127.0.0.1
+-- Erstellungszeit: 30. Okt 2018 um 14:33
+-- Server-Version: 10.1.21-MariaDB
+-- PHP-Version: 7.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Datenbank: `9543089db3`
+-- Datenbank: `fiary`
 --
 
 -- --------------------------------------------------------
@@ -29,15 +27,18 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `benutzer` (
-  `idbenutzer` int(10) UNSIGNED NOT NULL,
-  `vorname` varchar(255) NOT NULL,
-  `nachname` varchar(255) NOT NULL,
+  `idbenutzer` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `rolle` varchar(255) NOT NULL DEFAULT 'Redakteur',
-  `hash` varchar(255) NOT NULL,
-  `active` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Daten für Tabelle `benutzer`
+--
+
+INSERT INTO `benutzer` (`idbenutzer`, `username`, `email`, `password`) VALUES
+(1, 'ffhaus', 'birgit_haselmayr@aon.at', 'ffhaus!01');
 
 -- --------------------------------------------------------
 
@@ -223,7 +224,8 @@ INSERT INTO `uebungsart` (`iduebungsart`, `uebungsname`, `gesamtzeit`) VALUES
 -- Indizes für die Tabelle `benutzer`
 --
 ALTER TABLE `benutzer`
-  ADD PRIMARY KEY (`idbenutzer`);
+  ADD PRIMARY KEY (`idbenutzer`),
+  ADD UNIQUE KEY `UNIQ_36144FC7E7927C74` (`email`);
 
 --
 -- Indizes für die Tabelle `einsatzart`
@@ -284,45 +286,37 @@ ALTER TABLE `uebungsart`
 -- AUTO_INCREMENT für Tabelle `benutzer`
 --
 ALTER TABLE `benutzer`
-  MODIFY `idbenutzer` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
+  MODIFY `idbenutzer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT für Tabelle `einsatzart`
 --
 ALTER TABLE `einsatzart`
   MODIFY `ideinsatzart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT für Tabelle `fahrzeug`
 --
 ALTER TABLE `fahrzeug`
   MODIFY `idfahrzeug` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- AUTO_INCREMENT für Tabelle `kategorie`
 --
 ALTER TABLE `kategorie`
   MODIFY `idcategory` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT für Tabelle `mitglieder`
 --
 ALTER TABLE `mitglieder`
   MODIFY `idmitglieder` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT für Tabelle `rolle`
 --
 ALTER TABLE `rolle`
   MODIFY `idrolle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT für Tabelle `uebungsart`
 --
 ALTER TABLE `uebungsart`
   MODIFY `iduebungsart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
