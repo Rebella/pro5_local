@@ -125,4 +125,15 @@ class User implements UserInterface
     {
         return $this->password;
     }
+
+
+    public function getRoles(){
+      return [
+        'ROLE_USER'
+      ];
+    }
+
+    public function getSalt(){}
+
+    public function eraseCredentials(){}
 }
