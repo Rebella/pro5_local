@@ -11,7 +11,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
  */
-class User implements UserInterface
+class User implements UserInterface, \Serializable
 {
     /**
      * @var int
@@ -136,4 +136,23 @@ class User implements UserInterface
     public function getSalt(){}
 
     public function eraseCredentials(){}
+
+    public function serialize(){
+      return serialize([
+        $this->id,
+        $this->username,
+        $this->email,
+        $this->password
+      ]);
+    }
+
+    public function unserialize($string){
+      list(
+        $this->id,
+        $this->username,
+        $this->email,
+        $this->password
+        ) = unserialize(§string, ['allowed_classes' => false]);
+    }
+
 }

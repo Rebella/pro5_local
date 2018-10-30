@@ -17,7 +17,7 @@
 
 <div class="login">
 
-    <img src="../../../../web/img/placeholderLogo.svg">
+    <img  src=" {{ asset('img/logo_white.png') }}" alt="logout symbol">
     <br>
 
     <!-- Headline of the Login Form  -->
@@ -25,7 +25,10 @@
 
     <form action="{{ path('login') }}" method="POST">
 
-        <!-- Fiary Logo fehlt hier noch! -->
+        <!-- Error Messages here-->
+        {% if error %}
+        <span class="error">{{ error.messageKey }}</span>
+        {% endif %}
 
         <!-- Username Field -->
         <input type="text" class="text" name="_username" value="{{ last_username }}" placeholder="Username hier ...">
