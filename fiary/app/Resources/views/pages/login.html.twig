@@ -43,6 +43,8 @@
         <span>password</span>
         <br>
 
+        <input type="hidden" name="go_to" value="{{ path('pages') }}" />
+        <input type="hidden" name="back_to" value="{{ path('login') }}" />
 
         <button type="submit" class="signin">
           Login
