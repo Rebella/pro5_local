@@ -12,7 +12,7 @@ class SecurityController extends Controller
     /**
      * @Route("/login", name="login")
      */
-    public function login(Request $request, AuthenticationUtils $utils)
+    public function indexAction(Request $request, AuthenticationUtils $utils)
     {
         // replace this example code with whatever you need
         $error = $utils->getLastAuthenticationError();
@@ -23,6 +23,6 @@ class SecurityController extends Controller
         return $this->render('pages/login.html.twig', [
             'error' => $error,
             'last_username' => $lastUsername
-        ]);
+            ]);
     }
 }

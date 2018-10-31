@@ -1,9 +1,9 @@
 # To get started with security, check out the documentation:
 # https://symfony.com/doc/current/security.html
 security:
-    encoders:
-      AppBundle\Entity\User:
-        algorithm: bcrypt
+    #encoders:
+    #  AppBundle\Entity\User:
+    #   algorithm: bcrypt
 
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
@@ -19,14 +19,23 @@ security:
             security: false
 
         main:
+            pattern: ^/
             anonymous: true
 
             form_login:
               login_path: login
               check_path: login
               provider: my_provider
-              target_path_parameter: go_to
-              failure_path_parameter: back_to
+             # target_path_parameter: go_to
+             # failure_path_parameter: back_to
+
+    access_control:
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/, roles: ROLE_USER }
+
+
+      #    - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+      #    - { path: ^/, roles: ROLE_ADMIN }
 
       # activate different ways to authenticate
 
@@ -37,6 +46,5 @@ security:
             # https://symfony.com/doc/current/security/form_login_setup.html
             #form_login: ~
 
-    access_control:
-      - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-      - { path: ^/, roles: ROLE_ADMIN }
+
+

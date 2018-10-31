@@ -112,7 +112,6 @@ class User implements UserInterface, \Serializable
     public function setPassword($password)
     {
         $this->password = $password;
-
         return $this;
     }
 
@@ -133,7 +132,9 @@ class User implements UserInterface, \Serializable
       ];
     }
 
-    public function getSalt(){}
+    public function getSalt(){
+        return null;
+    }
 
     public function eraseCredentials(){}
 
@@ -142,7 +143,7 @@ class User implements UserInterface, \Serializable
         $this->id,
         $this->username,
         $this->email,
-        $this->password
+        $this->password,
       ]);
     }
 
@@ -151,8 +152,8 @@ class User implements UserInterface, \Serializable
         $this->id,
         $this->username,
         $this->email,
-        $this->password
-        ) = unserialize(§string, ['allowed_classes' => false]);
+        $this->password,
+        ) = unserialize($string, ['allowed_classes' => false]);
     }
 
 }
