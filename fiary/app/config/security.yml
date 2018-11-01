@@ -29,9 +29,9 @@ security:
              # target_path_parameter: go_to
              # failure_path_parameter: back_to
 
-    access_control:
-        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/, roles: ROLE_USER }
+    #access_control:
+    #    - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+     #   - { path: ^/, roles: ROLE_USER }
 
 
       #    - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }

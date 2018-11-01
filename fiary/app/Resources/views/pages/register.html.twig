@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>{% block title %}Hello!{% endblock %}</title>
+
+    <!-- Including the Stylesheet -->
+
+    <link rel="stylesheet" href= "{{ asset('css/loginform_test.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+</head>
+<body>
+
+{{ form_start(form) }}
+    {{ form_row(form.username) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.plainPassword.first) }}
+    {{ form_row(form.plainPassword.second) }}
+
+<button type="submit">Register!</button>
+{{ form_end(form) }}
+
+</body>
+</html>
