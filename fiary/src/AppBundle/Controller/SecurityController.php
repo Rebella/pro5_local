@@ -12,7 +12,7 @@ class SecurityController extends Controller
     /**
      * @Route("/login", name="login")
      */
-    public function indexAction(Request $request, AuthenticationUtils $utils)
+    public function loginAction(Request $request, AuthenticationUtils $utils)
     {
         // replace this example code with whatever you need
         $error = $utils->getLastAuthenticationError();
