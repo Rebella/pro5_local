@@ -25,4 +25,12 @@ class SecurityController extends Controller
             'last_username' => $lastUsername
             ]);
     }
+
+    /**
+     * @Route("/logout", name="logout")
+     * @throws \RuntimeException
+     */
+    public function logoutAction() {
+        throw new \RuntimeException('This should never be called directly.');
+    }
 }

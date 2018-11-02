@@ -19,7 +19,10 @@
 
         <div class="sidebar-header">
             <span class="mr-auto">Username</span>
-            <a id="log-out" class="ml-auto" href="{{ path('login') }}"><img  src=" {{ asset('img/exit.svg') }}" alt="logout symbol"></a>
+
+            {% if app.user %}
+            <a id="log-out" class="ml-auto" href="{{ logout_path('main') }}"><img  src=" {{ asset('img/exit.svg') }}" alt="logout symbol"></a>
+            {% endif %}
         </div>
 
         <ul class="list-unstyled components">

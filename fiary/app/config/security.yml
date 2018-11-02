@@ -18,6 +18,7 @@ security:
             security: false
 
         main:
+
             pattern: ^/
             anonymous: true
 
@@ -25,16 +26,14 @@ security:
               login_path: login
               check_path: login
               provider: my_provider
-             # target_path_parameter: go_to
-             # failure_path_parameter: back_to
+              # target_path_parameter: go_to
+              # failure_path_parameter: back_to
 
-    #access_control:
-    #    - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-     #   - { path: ^/, roles: ROLE_USER }
+            logout: true
 
-
-      #    - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-      #    - { path: ^/, roles: ROLE_ADMIN }
+    access_control:
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/, roles: ROLE_USER }
 
       # activate different ways to authenticate
 
