@@ -105,9 +105,12 @@
         </entry>
       </file>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 9e9241ea81c0fe5cc98f1d5d7b081d050bf74946
       <file leaf-file-name="mystyle.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/css/mystyle.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -145,9 +148,12 @@
         </entry>
       </file>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 9e9241ea81c0fe5cc98f1d5d7b081d050bf74946
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
@@ -506,7 +512,11 @@
       <workItem from="1541158653907" duration="384000" />
       <workItem from="1541159046779" duration="1283000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1541332291043" duration="9000" />
+=======
+>>>>>>> 07e4c5551cb2ffdad7ef6eca56d291ad64179133
+>>>>>>> 9e9241ea81c0fe5cc98f1d5d7b081d050bf74946
 =======
 >>>>>>> 07e4c5551cb2ffdad7ef6eca56d291ad64179133
 >>>>>>> 9e9241ea81c0fe5cc98f1d5d7b081d050bf74946
@@ -515,13 +525,19 @@
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="50092000" />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 9e9241ea81c0fe5cc98f1d5d7b081d050bf74946
     <option name="totallyTimeSpent" value="11644000" />
 =======
     <option name="totallyTimeSpent" value="50083000" />
 >>>>>>> 07e4c5551cb2ffdad7ef6eca56d291ad64179133
+<<<<<<< HEAD
+>>>>>>> 9e9241ea81c0fe5cc98f1d5d7b081d050bf74946
+=======
 >>>>>>> 9e9241ea81c0fe5cc98f1d5d7b081d050bf74946
   </component>
   <component name="ToolWindowManager">
@@ -529,9 +545,12 @@
     <editor active="false" />
     <layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35503355" />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 9e9241ea81c0fe5cc98f1d5d7b081d050bf74946
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -867,6 +886,9 @@
 =======
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
 >>>>>>> 07e4c5551cb2ffdad7ef6eca56d291ad64179133
+<<<<<<< HEAD
+>>>>>>> 9e9241ea81c0fe5cc98f1d5d7b081d050bf74946
+=======
 >>>>>>> 9e9241ea81c0fe5cc98f1d5d7b081d050bf74946
         </state>
       </provider>
