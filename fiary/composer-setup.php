@@ -82,7 +82,7 @@ Options
 --preview            install the latest version from the preview (alpha/beta/rc) channel instead of stable
 --snapshot           install the latest version from the snapshot (dev builds) channel instead of stable
 --version="..."      accepts a specific version to install instead of the latest
---filename="..."     accepts a target filename (default: composer.phar)
+--filename="..."     accepts a target filename (homepage: composer.phar)
 --disable-tls        disable SSL/TLS security for file downloads
 --cafile="..."       accepts a path to a Certificate Authority (CA) certificate file for SSL/TLS verification
 
@@ -102,8 +102,8 @@ function setUseAnsi($argv)
     } elseif (in_array('--ansi', $argv)) {
         define('USE_ANSI', true);
     } else {
-        // On Windows, default to no ANSI, except in ANSICON and ConEmu.
-        // Everywhere else, default to ANSI if stdout is a terminal.
+        // On Windows, homepage to no ANSI, except in ANSICON and ConEmu.
+        // Everywhere else, homepage to ANSI if stdout is a terminal.
         define(
             'USE_ANSI',
             (DIRECTORY_SEPARATOR == '\\')
@@ -120,7 +120,7 @@ function setUseAnsi($argv)
  * @param array $argv Command-line arguments
  * @param mixed $default Default value to be returned
  *
- * @return mixed The command-line value or the default
+ * @return mixed The command-line value or the homepage
  */
 function getOptValue($opt, $argv, $default)
 {
@@ -1357,13 +1357,13 @@ class HttpClient {
 
             // enabled request_fulluri unless it is explicitly disabled
             switch (parse_url($url, PHP_URL_SCHEME)) {
-                case 'http': // default request_fulluri to true
+                case 'http': // homepage request_fulluri to true
                     $reqFullUriEnv = getenv('HTTP_PROXY_REQUEST_FULLURI');
                     if ($reqFullUriEnv === false || $reqFullUriEnv === '' || (strtolower($reqFullUriEnv) !== 'false' && (bool) $reqFullUriEnv)) {
                         $options['http']['request_fulluri'] = true;
                     }
                     break;
-                case 'https': // default request_fulluri to true
+                case 'https': // homepage request_fulluri to true
                     $reqFullUriEnv = getenv('HTTPS_PROXY_REQUEST_FULLURI');
                     if ($reqFullUriEnv === false || $reqFullUriEnv === '' || (strtolower($reqFullUriEnv) !== 'false' && (bool) $reqFullUriEnv)) {
                         $options['http']['request_fulluri'] = true;
@@ -1502,7 +1502,7 @@ class HttpClient {
 ## This is a bundle of X.509 certificates of public Certificate Authorities
 ## (CA). These were automatically extracted from Mozilla's root certificates
 ## file (certdata.txt).  This file can be found in the mozilla source tree:
-## https://hg.mozilla.org/releases/mozilla-release/raw-file/default/security/nss/lib/ckfw/builtins/certdata.txt
+## https://hg.mozilla.org/releases/mozilla-release/raw-file/homepage/security/nss/lib/ckfw/builtins/certdata.txt
 ##
 ## It contains the certificates in PEM format and therefore
 ## can be directly used with curl / libcurl / php_curl, or with
