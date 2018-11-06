@@ -7,20 +7,74 @@
 
     <!-- Including the Stylesheet -->
 
-    <!-- <link rel="stylesheet" href= "{{ asset('css/loginform_test.css') }}"> -->
+    <link rel="stylesheet" href= "{{ asset('css/register_test.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
 </head>
 <body>
+{% block body %}
 
-{{ form_start(form) }}
+
+<div class="login">
+
+    <img  src=" {{ asset('img/logo_white.png') }}" alt="logout symbol">
+
+    <!-- Headline of the Register Form  -->
+    <h2 class="active"> Register for Fiary </h2>
+
+    <form method="POST">
+
+        <!-- Error Messages here-->
+        {% if error %}
+            <span class="error">{{ error.messageKey }}</span>
+        {% endif %}
+
+        <!-- Username Field -->
+        <input type="email" class="text" name="_usernameRegister" value="{{ last_username }}" placeholder="E-Mail">
+        <span>E-Mail</span>
+
+        <!-- Formatting -->
+        <br>
+
+        <!-- Username Field -->
+        <input type="text" class="text" name="_emailRegister" value="{{ last_username }}" placeholder="Username">
+        <span>Username</span>
+
+        <!-- Formatting -->
+        <br>
+
+        <!-- Password Field -->
+        <input type="password" class="text" name="_passwordRegister" placeholder="Password">
+        <span>Password</span>
+
+        <!-- Formatting -->
+        <br>
+
+        <!-- Password Field -->
+        <input type="password" class="text" name="_passwordRegisterRepeat" placeholder="Password Repeat">
+        <span>Password Repeat</span>
+        <br>
+
+        <button type="submit" class="signin">
+            Register User!
+        </button>
+
+        <hr>
+
+    </form>
+
+    {{ form_start(form) }}
     {{ form_row(form.username) }}
     {{ form_row(form.email) }}
     {{ form_row(form.plainPassword.first) }}
     {{ form_row(form.plainPassword.second) }}
+    {{ form_end(form) }}
 
-<button type="submit">Register!</button>
-{{ form_end(form) }}
+    <button type="submit" class="signin">
+        Register
+    </button>
 
+</div>
+{% endblock %}
 </body>
 </html>

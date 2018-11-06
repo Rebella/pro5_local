@@ -1,3 +1,9 @@
+/* Color Constants */
+:root {
+    --grey: #505050;
+    --red: rgb(141, 4, 3);
+}
+
 /* BOOTSTRAP STARTER TEMPLATE*/
 
 #main-content {
