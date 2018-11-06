@@ -1,7 +1,26 @@
+/* Importieren der Schrift die standardmäßig genutzt werden soll */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+*{
+    margin:0;
+    padding:0;
+}
+
 /* Color Constants */
 :root {
     --grey: #505050;
     --red: rgb(141, 4, 3);
+}
+
+/* Die Color Konstanten können folgendermaßen genutzt werden - Beispiel:
+background: var(--grey);
+Bitte bei Grau/Rot immer diese zwei Farbtöne als Variablen verwenden, dann müssen wir sie
+stets nur hier umändern!*/
+
+
+/* Start eigenes CSS */
+
+body{
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* BOOTSTRAP STARTER TEMPLATE*/

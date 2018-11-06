@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eintrag erstellen</title>
+
+    <!-- Including the Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="../../../../web/css/progressbar.css">
+    <link rel="stylesheet" type="text/css" href="../../../../web/css/mystyle.css">
+
+    <!-- Including Javascript -->
+    <script src="../../../../web/js/progressbar.js"></script>
+
+</head>
+<body>
+
+<!--form-content-->
+<form id="form-id">
+
+    <!--Progressbar-->
+    <ul class='progress'>
+        <li class="active">Kategorie auswählen</li>
+        <li>Allgemeine Details</li>
+        <li>Wetter und Straßenbeschaffenheit</li>
+    </ul>
+
+    <!-- Auswahl der Eintrags Kategorie-->
+    <fieldset>
+        <h2 class='title'>Kategorie Auswahl</h2>
+        <h3 class='sub-title'>Wähle die Kategorie des Eintrags aus aus</h3>
+        <button class='next-button custom-button'>Einsatz</button><br>
+        <button class='next-button custom-button'>Übung</button><br>
+        <button class='next-button custom-button'>Tätigkeit</button>
+        <input type='button' name='next' class='next-button custom-button' value="Next">
+    </fieldset>
+
+    <!--Allgemeine Details des Eintrags-->
+    <fieldset>
+        <h2 class='title'>Tätigkeits Details</h2>
+        <h3 class='sub-title'>Bitte gib hier die Details der ausgeübten Aufgabe bekannt!</h3>
+        <input type='text' name='twitter' placeholder='Twitter'>
+        <input type='text' name='facebook' placeholder='Facebook'>
+        <input type='text' name='google-plus' placeholder='Google Plus'>
+        <input type='button' name='restart' class='next-button custom-button' value="Restart">
+        <input type='button' name='previous' class='prev-button custom-button' value="Back">
+        <input type='button' name='next' class='next-button custom-button' value="Next">
+    </fieldset>
+
+    <!--Personal Details-->
+    <fieldset>
+        <h2 class='title'>Mehr Information hier</h2>
+        <h3 class='sub-title'>We will never sell it.</h3>
+        <input type='text' name='first-name' placeholder='First Name'>
+        <input type='text' name='last-name' placeholder='Last-Name'>
+        <input type='text' name='phone-no' placeholder='Phone No.'>
+        <input type='text' name='address' placeholder='Address'>
+        <input type='button' name='restart' class='next-button custom-button' value="Restart">
+        <input type='button' name='previous' class='prev-button custom-button' value="Back">
+        <input type='button' name='next' class='next-button custom-button' value="Next">
+    </fieldset>
+
+    <!-- Wetter und Straßenbeschaffenheit -->
+    <fieldset>
+        <h2 class='title'>Wetter und Straßenbeschaffenheit</h2>
+        <h3 class='sub-title'>We will never sell it.</h3>
+        <input type='text' name='first-name' placeholder='First Name'>
+        <input type='text' name='last-name' placeholder='Last-Name'>
+        <input type='text' name='phone-no' placeholder='Phone No.'>
+        <input type='text' name='address' placeholder='Address'>
+        <input type='button' name='restart' class='next-button custom-button' value="Restart">
+        <input type='button' name='previous' class='prev-button custom-button' value="Back">
+        <input type='button' name='next' class='next-button custom-button' value="Next">
+    </fieldset>
+
+</form>
+
+</body>
+</html>
+
+<!-- Code Snippet:
+https://codepen.io/ambika-rajesh/pen/QBmBwy
+-->
