@@ -23,6 +23,8 @@
         <li class="active">Kategorie auswählen</li>
         <li>Allgemeine Details</li>
         <li>Wetter und Straßenbeschaffenheit</li>
+        <li>Viertes Element</li>
+        <li>Fünftes Element</li>
     </ul>
 
     <!-- Auswahl der Eintrags Kategorie-->
@@ -31,7 +33,7 @@
         <h3 class='sub-title'>Wähle die Kategorie des Eintrags aus aus</h3>
         <button class='next-button custom-button'>Einsatz</button><br>
         <button class='next-button custom-button'>Übung</button><br>
-        <button class='next-button custom-button'>Tätigkeit</button>
+        <button class='next-button custom-button'>Tätigkeit</button><br>
         <input type='button' name='next' class='next-button custom-button' value="Next">
     </fieldset>
 
@@ -39,10 +41,11 @@
     <fieldset>
         <h2 class='title'>Tätigkeits Details</h2>
         <h3 class='sub-title'>Bitte gib hier die Details der ausgeübten Aufgabe bekannt!</h3>
-        <input type='text' name='twitter' placeholder='Twitter'>
+        <label for="eintragsbezeichnung">Eintragsbezeichnung:</label><br>
+        <input id="eintragsbezeichnung" type='text' placeholder='Eintragsbezeichnung'>
         <input type='text' name='facebook' placeholder='Facebook'>
         <input type='text' name='google-plus' placeholder='Google Plus'>
-        <input type='button' name='restart' class='next-button custom-button' value="Restart">
+        <input type='button' name='restart' class='reset-button custom-button' value="Restart">
         <input type='button' name='previous' class='prev-button custom-button' value="Back">
         <input type='button' name='next' class='next-button custom-button' value="Next">
     </fieldset>
@@ -55,7 +58,7 @@
         <input type='text' name='last-name' placeholder='Last-Name'>
         <input type='text' name='phone-no' placeholder='Phone No.'>
         <input type='text' name='address' placeholder='Address'>
-        <input type='button' name='restart' class='next-button custom-button' value="Restart">
+        <input type='button' name='restart' class='reset-button custom-button' value="Restart">
         <input type='button' name='previous' class='prev-button custom-button' value="Back">
         <input type='button' name='next' class='next-button custom-button' value="Next">
     </fieldset>
@@ -63,12 +66,25 @@
     <!-- Wetter und Straßenbeschaffenheit -->
     <fieldset>
         <h2 class='title'>Wetter und Straßenbeschaffenheit</h2>
-        <h3 class='sub-title'>We will never sell it.</h3>
+        <h3 class='sub-title'>Hier kommen noch Infos hin</h3>
         <input type='text' name='first-name' placeholder='First Name'>
         <input type='text' name='last-name' placeholder='Last-Name'>
         <input type='text' name='phone-no' placeholder='Phone No.'>
         <input type='text' name='address' placeholder='Address'>
-        <input type='button' name='restart' class='next-button custom-button' value="Restart">
+        <input type='button' name='restart' class='reset-button custom-button' value="Restart">
+        <input type='button' name='previous' class='prev-button custom-button' value="Back">
+        <input type='button' name='next' class='next-button custom-button' value="Next">
+    </fieldset>
+
+    <!-- Fünfter Part -->
+    <fieldset>
+        <h2 class='title'>Wetter und Straßenbeschaffenheit</h2>
+        <h3 class='sub-title'>Hier kommen noch Infos hin</h3>
+        <input type='text' name='first-name' placeholder='First Name'>
+        <input type='text' name='last-name' placeholder='Last-Name'>
+        <input type='text' name='phone-no' placeholder='Phone No.'>
+        <input type='text' name='address' placeholder='Address'>
+        <input type='button' name='restart' class='reset-button custom-button' value="Restart">
         <input type='button' name='previous' class='prev-button custom-button' value="Back">
         <input type='button' name='next' class='next-button custom-button' value="Next">
     </fieldset>

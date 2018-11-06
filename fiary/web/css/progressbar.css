@@ -15,17 +15,18 @@ background: var(--grey); */
 
 /* Start Login CSS */
 
-html{
-    height:100%;
+body{
     background: var(--grey);
 }
 
+/* Aussehen des eigentlichen Forms */
 #form-id{
-    width:400px;
+    width:70%;
     margin:50px auto;
     text-align:center;
     position: relative;
 }
+
 #form-id fieldset{
     background:#fff;
     border:0 none;
@@ -66,6 +67,7 @@ html{
 #form-id .custom-button:hover{
     box-shadow:0 0 0 2px #fff, 0 0 0 4px var(--red)
 }
+
 .title{
     font-size:15px;
     margin-bottom:10px;
@@ -80,17 +82,17 @@ html{
 }
 /*Progressbar*/
 .progress {
-    margin-bottom: 30px;
-    overflow: hidden;
+    margin-bottom: 40px;
     /*CSS counters to number the steps*/
     counter-reset: step;
 }
 .progress li {
+    margin-bottom: 20px;
     list-style-type: none;
     color: white;
     text-transform: uppercase;
-    font-size: 9px;
-    width: 33.33%;
+    font-size: 12px;
+    width: 20%;
     float: left;
     position: relative;
 }

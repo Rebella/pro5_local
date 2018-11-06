@@ -27,5 +27,18 @@ $(document).ready(function() {
         current.hide();
         prev.show();
     });
+
+    $(".reset-button").click(function() {
+        var current = $(this).parent();
+        var next = $(this)
+            .first();
+        $(".progress li")
+            .eq($("fieldset").index(0))
+            .addClass("active");
+        current.hide();
+        next.show();
+    });
+
+
 });
 
