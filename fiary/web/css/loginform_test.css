@@ -15,6 +15,29 @@ body,
     letter-spacing: 0.05em;
 }
 
+/* unvisited link */
+a:link {
+    color: #fff;
+    text-underline: none;
+}
+
+/* visited link */
+a:visited {
+    color: #fff;
+    text-underline: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: rgb(141, 4, 3) ;
+    text-underline: none;
+}
+
+.link {
+    color: #fff;
+    text-underline: none;
+}
+
 .login {
     position: relative;
     height: 80vh;

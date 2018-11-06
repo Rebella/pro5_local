@@ -14,6 +14,11 @@ body,
     letter-spacing: 0.05em;
 }
 
+a {
+    color: #fff;
+    text-underline: none;
+}
+
 .login {
     position: relative;
     height: 80vh;
