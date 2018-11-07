@@ -15,35 +15,75 @@
 <div class="wrapper">
 
     <nav id="sidebar">
-        <span class="dot"></span>
+
+
+       <!-- <span class="dot"></span>-->
 
         <div class="sidebar-header">
-            <span class="mr-auto">Username</span>
-
-            {% if app.user %}
-            <a id="log-out" class="ml-auto" href="{{ logout_path('main') }}"><img  src=" {{ asset('img/exit.svg') }}" alt="logout symbol"></a>
-            {% endif %}
+            <img id="profile_pic" class="rounded-circle" src="{{ asset('img/logo_circular.jpg') }}" alt="profile-picture">
         </div>
 
         <ul class="list-unstyled components">
-            <li class="active nav-item"><a class="nav-link" href="{{ path('homepage') }}">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ path('statistics') }}">Statistiken</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ path('entries') }}">Einträge</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ path('infos') }}">Info & Downloads</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ path('blackboard') }}">Schwarzes Brett</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ path('support') }}">Support</a></li>
+            <li class="active nav-item">
+                <a class="nav-link" href="{{ path('homepage') }}">
+                    <i><img src="{{  asset('img/profile.svg') }}" alt="home symbol"></i>
+                    <span>Profil</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="{{ path('statistics') }}">
+                     <i><img src="{{  asset('img/stats.svg') }}" alt="home symbol"></i>
+                     <span>Statistiken</span>
+                 </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('entries') }}">
+                    <i><img src="{{  asset('img/entries.svg') }}" alt="entries symbol"></i>
+                    <span>Einträge</span>
+                </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="{{ path('infos') }}">
+                   <i><img src="{{  asset('img/info.svg') }}" alt="entries symbol"></i>
+                   <span>Info & Downloads</span>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="{{ path('blackboard') }}">
+                   <i><img src="{{  asset('img/bookmark.svg') }}" alt="entries symbol"></i>
+                   <span>Schwarzes Brett</span>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="{{ path('support') }}">
+                   <i><img src="{{  asset('img/settings.svg') }}" alt="entries symbol"></i>
+                   <span>Support</span>
+               </a>
+            </li>
         </ul>
+
+        <div class="menu-toggler container-fluid">
+            <!--<span>Menu</span>-->
+            <button onclick="closeNav()" id="sidebarCollapse" class="btn">
+               <img  id="arrow" src=" {{ asset('img/close-menu.svg') }}" alt="logout symbol">
+            </button>
+        </div>
+
+        <div class="logout">
+            <div >
+                {% if app.user %}
+                    <a href="{{ logout_path('main') }}">
+                        <i><img  src=" {{ asset('img/exit.svg') }}" alt="logout symbol"></i>
+                        <span>Logout</span>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+
     </nav>
 
     <div id="content">
 
-           <div class="menu-toggler container-fluid">
-               <!--<span>Menu</span>-->
-               <button onclick="closeNav()" id="sidebarCollapse" class="btn">
-                   <i class="fas fa-align-left"></i>
-                   <img  id="arrow" src=" {{ asset('img/close-menu.svg') }}" alt="logout symbol">
-               </button>
-           </div>
         <div class="container">
             <div class="row">
                 <div class="col">
