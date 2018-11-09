@@ -28,6 +28,7 @@ $(document).ready(function() {
         prev.show();
     });
 
+    /* Funktioniert noh nicht 100% */
     $(".reset-button").click(function() {
         var current = $(this).parent();
         var next = $(this)
@@ -38,6 +39,10 @@ $(document).ready(function() {
         current.hide();
         next.show();
     });
+
+    /* Abbrechen */
+
+
 
 
 });
