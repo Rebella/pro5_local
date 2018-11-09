@@ -23,9 +23,18 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-.container {
-    margin: 10%;
+h1 {
+    margin-bottom: 50px;
 }
+
+.container {
+    margin: 50px;
+}
+
+#content {
+    width: 100%;
+}
+
 
 /* BOOTSTRAP STARTER TEMPLATE*/
 
