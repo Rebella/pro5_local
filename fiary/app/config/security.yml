@@ -31,10 +31,10 @@ security:
 
             logout: true
 
-    access_control:
-
-        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/, roles: ROLE_USER }
+   # access_control:
+#
+ #       - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+  #      - { path: ^/, roles: ROLE_USER }
 
       # activate different ways to authenticate
 

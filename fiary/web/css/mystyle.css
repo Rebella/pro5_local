@@ -35,6 +35,10 @@ h1 {
     width: 100%;
 }
 
+.red {
+    color: var(--red);
+}
+
 
 /* BOOTSTRAP STARTER TEMPLATE*/
 
